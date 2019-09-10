@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="register.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--mediaquery-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      
+    </head>
+    <body id="page2">
+<div class="wrapper2">
+        <nav>
+                <div class="nav-wrapper grey darken-4">
+                  <a href="#!" class="brand-logo"><img src="images/icon4.png" style="width: 60px"></a>
+                  <ul class="right">
+                    <li ><a href="register.html">Home</a></li>
+                    <li><a href="#log" class="modal-trigger">courses</a></li>
+          
+                    <li id="sign_up"><a href="#" class="modal-trigger">help</a></li>
+                  </ul>
+                </div>
+              </nav>
+              <main>
+                  <div class="container"><h4 class="center">ALL STUDENTS</h4></div>
+                  <div class="section"></div>
+                  <div class="students container">
+
+                  </div>
+              </main>
+</div>
+
+<script>
+
+const mainDiv = document.querySelector('.students')
+    for(var i=0 ; i<localStorage.length;i++){
+        const div = document.createElement('div')
+        div.innerHTML = `<h5 style="display:inline">${localStorage.key(i)}<i class="material-icons right dlt">delete</i><h5><hr>`
+        div.addEventListener('click',(e)=>{
+             const pass = prompt("Enter your password")
+             const obj =JSON.parse(localStorage.getItem(e.target.firstChild.textContent))
+             if(obj.pass === pass)
+             {
+                 
+                 div.innerHTML += `<li><b>Name:</b> ${obj.name}</li>
+                        <li><b>Email:</b> ${obj.email}</li>
+                                <li><b>Qualification:</b> ${obj.quali}</li>`
+             div.style.borderBottomStyle = 'dashed'
+             }
+             else{
+                 alert("try again")
+             }
+        })
+        div.style.marginBottom = '15px'
+        mainDiv.appendChild(div)    
+    }
+    const arr = document.getElementsByClassName('dlt')
+    for(var i=0 ;i<arr.length;i++)
+    {
+        arr[i].addEventListener('click',(e)=>{
+            e.stopPropagation()
+            const key1 = e.target.parentElement.textContent
+            localStorage.removeItem(key1.slice(0,key1.indexOf('d')))
+           mainDiv.removeChild(e.target.parentElement.parentElement)
+        })
+    }
+</script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+</html>

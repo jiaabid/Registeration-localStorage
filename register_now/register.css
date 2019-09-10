@@ -1,0 +1,75 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+.parallax img
+{
+min-height: 200%;
+    z-index: 2;
+}
+.parallax-container
+{
+    padding: 4%;
+}
+.ban
+{
+    
+    margin-bottom: 1%;
+    margin-left: 10%;
+    padding: 2%;
+    border-radius: 100px;
+    width: 20%;
+    text-align: center;
+}
+.parent
+{
+    display: flex;
+    flex-direction: row;
+}
+.div1
+{
+    flex: 3;
+/*   display: none;*/
+}
+
+.signup
+{
+    display: none;
+}
+label
+{
+    font-size: 20px !important;
+    margin-bottom: 1%;
+    
+}
+.sign
+{
+    text-align: center !important;
+}
+.tech
+{
+    width:47%;
+    margin-right: 2%;
+}
+body.page1
+{
+    background: radial-gradient( #505050 0% ,#B0B0B0 2%, #000000 97%);
+}
+.modal
+{
+    border-radius: 30px;
+    
+}
+#signup
+{
+    top: 20px !important;
+    max-height:100% !important;
+}
+#page2
+{
+    background-color: transparent !important;
+}
+
+    

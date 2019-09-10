@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="register.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--mediaquery-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+  <script>
+    $(document).ready(function () {
+      $('.parallax').parallax();
+    });
+
+    $(document).ready(function () {
+      $('select').formSelect();
+    });
+
+    $(document).ready(function () {
+      $('.modal').modal();
+    });
+
+  </script>
+
+
+  
+
+</head>
+
+<body class="page1">
+  <div class="wrapper">
+    <nav>
+      <div class="nav-wrapper grey darken-4 ">
+        <a href="#!" class="brand-logo" ><img src="images/icon4.png" style="width: 60px"></a>
+        <ul class="right">
+          <li class="active"><a href="#!" class="white-text">Home</a></li>
+          <li><a href="#log" class="modal-trigger log_btn white-text" id="login">Courses</a></li>
+
+          <li id="sign_up"><a href="#" class="modal-trigger sign_btn white-text">Help</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="parallax-container">
+        <h1>COURSE TECH</h1>
+        <i class="grey-text text-lighten-1">The quality education and ladder to your career</i>
+        <p>We offer latest tech related courses (e.g: javascript , node.js , Rails etc) free of cost .<br>Now you can
+          learn at anytime and in any time , no more course deadlines.<br>Learn , code ,interact and build real life
+          projects. </p>
+        <a class="btn ban modal-trigger" href="#signup">Resgiter</a><br>
+        <a class="btn ban" href="student.html"  id="registered">Registered</a>
+        <div class="parallax"><img src="images/back.jpg">
+        </div>
+      </div>
+      <div class="row">
+        <div class="container col l4 m4 s12">
+          <div class="card  grey ">
+            <div class="card-content">
+              <img class="round responsive-img" src="images/handsome-young-man-on-grey-260nw-492562780.jpg.webp">
+              <h4>Professor Xyz</h4>
+              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur</p>
+            </div>
+          </div>
+        </div>
+        <div class="container col l4 m4 s12">
+          <div class="card grey lighten-1">
+            <div class="card-content">
+              <img class="responsive-img" src="images/handsome-young-man-on-grey-260nw-492562780.jpg.webp">
+              <h4>Professor Xyz</h4>
+              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur</p>
+            </div>
+          </div>
+        </div>
+        <div class="container col l4 m4 s12">
+          <div class="card  grey lighten-1">
+            <div class="card-content">
+              <img class=" responsive-img" src="images/handsome-young-man-on-grey-260nw-492562780.jpg.webp">
+              <h4>Professor Xyz</h4>
+              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!--                register form-->
+      <div class="modal m2" id="signup">
+        <div class="modal-content">
+          <form id="register" action="#!" method="POST">
+            <fieldset>
+          <div class="row">
+            <div class="input-field col l6 s12">
+              <input type="text" name="fname" id="fname">
+              <label for="fname">First Name:</label>
+            </div>
+            <div class="input-field col l6 s12">
+              <input type="text" name="lname" id="lname">
+              <label for="lname">Last Name:</label>
+            </div>
+          </div>
+          <div class="row">
+              <div class="input-field col l12 s12">
+                <input type="email" name="mail" id="mail">
+                <label for="mail">E-mail:</label>
+              </div>
+            </div>
+            <div class="row">
+                <div class="input-field col l12 s12">
+                  <input type="password" name="pass" id="pass">
+                  <label for="pass">Password:</label>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="input-field col s12">
+                      <select id="quali">
+                        <option value="" disabled selected>Your Qualification</option>
+                        <option value="inter">Intermediate</option>
+                        <option value="ungrad">Undergrad</option>
+                        <option value="grad">Graduate</option>
+                      </select>
+                      <label>Qualification:</label>
+                    </div>
+                </div>
+        <div class="row">
+<input type="submit" value="Signup" class="btn right">
+        </div>
+      </fieldset>
+              </form>
+        </div>
+
+      </div>
+
+    </main>
+
+
+    <footer class="page-footer grey darken-4">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Course Tech</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">ABOUT</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">CONTACT</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">FAQs</a></li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2014 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
